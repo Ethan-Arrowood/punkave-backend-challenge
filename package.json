@@ -21,5 +21,19 @@
   "bugs": {
     "url": "https://github.com/Ethan-Arrowood/punkave-backend-challenge/issues"
   },
-  "homepage": "https://github.com/Ethan-Arrowood/punkave-backend-challenge#readme"
+  "homepage": "https://github.com/Ethan-Arrowood/punkave-backend-challenge#readme",
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-punkave": "^1.0.10",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.33"
+  }
 }

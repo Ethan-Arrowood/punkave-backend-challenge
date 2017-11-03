@@ -1,0 +1,25 @@
+{
+  "name": "punkave-backend-challenge",
+  "version": "1.0.0",
+  "description": "Backend Challenge for PunkAve",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ethan-Arrowood/punkave-backend-challenge.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "mongodb",
+    "javascript"
+  ],
+  "author": "Ethan Arrowood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ethan-Arrowood/punkave-backend-challenge/issues"
+  },
+  "homepage": "https://github.com/Ethan-Arrowood/punkave-backend-challenge#readme"
+}

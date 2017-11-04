@@ -2,7 +2,13 @@ var express = require('express');
 require('dotenv').config();
 var _ = require('lodash');
 var async = require('async');
-var { getCurrentWeather, getIndego } = require('./data-collection.js');
+var moment = require('moment');
+var {
+  getCurrentWeather,
+  getIndego,
+  collectDataInterval
+} = require('./data-collection.js');
+var { db } = require('./mongo-db.js');
 
 var app = express();
 
@@ -14,6 +20,9 @@ var app = express();
 
 app.get('/', function(req, res) {
   res.send({ "Hello": "World" })
+  //db.createCollection('weather', function() { console.log("Created Collection")})
+  var now = moment().format();
+  console.log(typeof now);
   //collectDataInterval();
 })
 
@@ -37,5 +46,6 @@ app.get('/indego', function(req, res) {
 
 var server = app.listen(process.env.PORT || 3000, function() {
   var port = server.address().port;
+  console.log(collectDataInterval);
   console.log("Server listening on port " + port );
 })

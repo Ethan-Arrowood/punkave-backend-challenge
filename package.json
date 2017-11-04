@@ -41,6 +41,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.19.1",
     "mongodb": "^2.2.33",
+    "mongoose": "^4.13.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "request-promise-native": "^1.0.5"

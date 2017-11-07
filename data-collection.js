@@ -27,7 +27,7 @@ function collectData() {
     var station = new Station({
       _id: new ObjectID(),
       weather_id: weather_id,
-      data: data
+      data: parseIndego(data)
     })
 
     station.save(function (err) {
@@ -60,7 +60,20 @@ function getIndego() {
   })
 }
 
+function parseIndego(data) {
+  var keys = _.map(data.features, function(feature, index, collection) {
+    return feature.properties.kioskId
+  });
+  var dict = {};
+  for (var i = 0; i < keys.length; i++) {
+    dict[keys[i]] = data.features[i];
+  }
+  return dict;
+}
+
 module.exports.getCurrentWeather = function() { return getCurrentWeather() };
 module.exports.getIndego = function() { return getIndego() };
+module.exports.collectData = function() { return collectData() };
+module.exports.parseIndego = function(d) { return parseIndego(d) };
 module.exports.collectDataInterval = collectDataInterval;
 exports.shutdown = function() { return clearInterval(collectDataInterval) };
